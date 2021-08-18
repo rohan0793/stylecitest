@@ -75,14 +75,11 @@
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
+                    @auth<a href="{{ url('/home') }}">Home</a>@else
                         <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
+@if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
-                        @endif
+                @endif
                     @endauth
                 </div>
             @endif
@@ -93,19 +90,19 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
+            <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">
+        <a href="https://laravel-news.com">
 
 
                         News
 
-                    </a>
+            </a>
 
 
                     <a href="https://blog.laravel.com">Blog <p></p> <p></p> <p></p> <p></p> <p></p> <ul><li></li><li></li><li></li><li></li></ul> </a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
+        <a href="https://nova.laravel.com">Nova</a>
+           <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
